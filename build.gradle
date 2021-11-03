@@ -1,0 +1,37 @@
+
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+
+group 'github-repositories'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    annotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
+
+    runtimeOnly 'org.springframework:spring-instrument'
+
+    runtimeOnly 'net.sourceforge.jtds:jtds:1.3.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    implementation 'com.google.guava:guava:20.0'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}

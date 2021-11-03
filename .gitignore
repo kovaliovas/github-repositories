@@ -1,0 +1,8 @@
+.idea
+.gradle
+build
+logs
+bin
+out
+docker/devtools/.data
+*.iml
